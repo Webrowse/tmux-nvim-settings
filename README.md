@@ -87,7 +87,7 @@ lazy.nvim (by folke) with `rocks` disabled.
 ## Usage
 
 ```sh
-git clone https://github.com/YOUR_USER/tmux-nvim-settings.git
+git clone git@github.com:Webrowse/tmux-nvim-settings.git
 cd tmux-nvim-settings
 chmod +x setup.sh
 ./setup.sh
