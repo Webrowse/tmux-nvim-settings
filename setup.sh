@@ -10,6 +10,7 @@ echo "=== Installing tmux + neovim + rust-analyzer ==="
 brew install tmux neovim rust-analyzer
 
 echo "=== Creating config directories ==="
+rm -rf ~/.config/nvim/after
 mkdir -p ~/.config/nvim/lua/plugins
 
 echo "=== Writing ~/.tmux.conf ==="
@@ -166,7 +167,7 @@ return {
   {
     "iamcco/markdown-preview.nvim",
     cmd = { "MarkdownPreview", "MarkdownPreviewStop" },
-    build = function() vim.fn["mkdp#util#install"]() end,
+    build = "cd app && bash install.sh",
     ft = { "markdown" },
   },
   {
